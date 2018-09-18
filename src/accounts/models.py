@@ -100,6 +100,8 @@ class Profile(models.Model):
                 code='Invalid Cellphone Number'
             )
         ])
+    first_name = models.CharField(max_length=50, null=True, blank=True)
+    last_name = models.CharField(max_length=50, null=True, blank=True)
 
     def __str__(self):
         return str(self.user.username)
