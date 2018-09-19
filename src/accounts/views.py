@@ -27,6 +27,6 @@ def register(request, *args, **kwargs):
     form = UserCreationForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return HttpResponseRedirect('accounts/login')
+        return HttpResponseRedirect('/accounts/login')
 
     return render(request, 'accounts/register.html', {'form': form})
